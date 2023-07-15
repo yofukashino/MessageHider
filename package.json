@@ -1,10 +1,9 @@
 {
-  "name": "plugin-template",
+  "name": "message-hider",
   "version": "1.0.0",
-  "description": "A plugin template",
+  "description": "Get an option to hide a message by right clicking on it.",
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
+    "node": ">=14.0.0"
   },
   "scripts": {
     "build": "replugged build plugin",
@@ -19,18 +18,21 @@
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ahlawat",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.15.11",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
-    "eslint": "^8.37.0",
+    "@types/node": "^18.16.18",
+    "@types/react": "^18.2.13",
+    "discord-types": "^1.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
     "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.32.2",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "replugged": "^4.4.2",
-    "typescript": "^5.0.3"
-  }
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {}
 }

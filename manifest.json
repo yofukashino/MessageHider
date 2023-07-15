@@ -1,16 +1,18 @@
 {
-  "id": "dev.replugged.PluginTemplate",
-  "name": "Plugin Template",
-  "description": "A plugin template",
+  "id": "dev.tharki.MessageHider",
+  "name": "MessageHider",
+  "description": "Get an option to hide a message by right clicking on it.",
+  "image": "https://i.imgur.com/b5WXMcq.gif",
+  "source": "https://github.com/Tharki-God/MessageHider",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "Ahlawat",
+    "discordID": "1025214794766221384",
+    "github": "Tharki-God"
   },
   "version": "1.0.0",
   "updater": {
-    "type": "github",
-    "id": "replugged-org/plugin-template"
+    "type": "store",
+    "id": "dev.tharki.MessageHider"
   },
   "license": "MIT",
   "type": "replugged-plugin",
