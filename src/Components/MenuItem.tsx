@@ -4,7 +4,7 @@ import * as Icons from "./Icons";
 import * as Utils from "../lib/utils";
 import * as Types from "../types";
 const {
-  ContextMenu: { MenuItem },
+  ContextMenu: { MenuItem, ItemColors },
 } = components;
 
 export default ({
@@ -19,7 +19,7 @@ export default ({
       {...{
         id: "hide-message",
         label: "Hide Message",
-        color: "danger",
+        color: ItemColors.DANGER,
         icon: () => Icons.eye("18", "18"),
         action: () => {
           const cache = MessageCacheActions.getOrCreate(channel.id) as Types.MessageCacheProps;
