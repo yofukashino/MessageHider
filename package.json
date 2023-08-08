@@ -1,6 +1,6 @@
 {
   "name": "message-hider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get an option to hide a message by right clicking on it.",
   "engines": {
     "node": ">=14.0.0"
