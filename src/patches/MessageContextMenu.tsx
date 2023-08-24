@@ -14,7 +14,17 @@ export const patchMessageContextMenu = (): void => {
         Array.isArray(ItemGroup?.props?.children) &&
         (ItemGroup?.props?.children?.findIndex((item) => item?.props?.id === "delete") ??
           ItemGroup?.props?.children?.findIndex((item) => item?.props?.id === "report"));
-      if (!ItemIndex) return;
+      if (!ItemIndex) {
+        (menu.children as Types.ReactElement[])
+          .find((element) => element?.props?.id === "replugged")
+          .props.children.push(
+            mhMenuItem({
+              channel: channel as Types.Channel,
+              message: message as Types.Message,
+            }),
+          );
+        return;
+      }
       ItemGroup.props.children = ItemGroup?.props?.children.filter(
         (c) => c?.props?.id !== "hide-message",
       );
