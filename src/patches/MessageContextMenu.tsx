@@ -1,39 +1,39 @@
 import { PluginInjectorUtils } from "../index";
-import mhMenuItem from "../Components/MenuItem";
-import * as Types from "../types";
-export const patchMessageContextMenu = (): void => {
+import menuItem from "../Components/MenuItem";
+import Types from "../types";
+export default (): void => {
   PluginInjectorUtils.addMenuItem(
     Types.DefaultTypes.ContextMenuTypes.Message,
-    ({ channel, message }, menu) => {
-      const ItemGroup = (menu.children as Types.ReactElement[]).find((element) =>
+    (
+      { channel, message }: { channel: Types.Channel; message: Types.Message },
+      menu: Types.MenuProps,
+    ) => {
+      const ItemGroup = menu.children.find((element) =>
         element?.props?.children?.some?.(
           (item) => item?.props?.id === "delete" || item?.props?.id === "report",
         ),
       );
+      if (ItemGroup) {
+        ItemGroup.props.children = ItemGroup?.props?.children.filter(
+          (c) => c?.props?.id !== "hide-message",
+        );
+      } else {
+        return menuItem({
+          channel: channel,
+          message: message,
+        });
+      }
       const ItemIndex =
         Array.isArray(ItemGroup?.props?.children) &&
         (ItemGroup?.props?.children?.findIndex((item) => item?.props?.id === "delete") ??
           ItemGroup?.props?.children?.findIndex((item) => item?.props?.id === "report"));
-      if (!ItemIndex) {
-        (menu.children as Types.ReactElement[])
-          .find((element) => element?.props?.id === "replugged")
-          .props.children.push(
-            mhMenuItem({
-              channel: channel as Types.Channel,
-              message: message as Types.Message,
-            }),
-          );
-        return;
-      }
-      ItemGroup.props.children = ItemGroup?.props?.children.filter(
-        (c) => c?.props?.id !== "hide-message",
-      );
+
       ItemGroup?.props?.children.splice(
-        ItemIndex,
+        ItemIndex - 1,
         0,
-        mhMenuItem({
-          channel: channel as Types.Channel,
-          message: message as Types.Message,
+        menuItem({
+          channel: channel,
+          message: message,
         }),
       );
     },

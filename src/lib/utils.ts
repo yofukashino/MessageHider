@@ -11,3 +11,5 @@ export const forceRerenderElement = (selector: string): void => {
   });
   ownerInstance.forceUpdate(() => ownerInstance.forceUpdate(() => {}));
 };
+
+export default { ...util, forceRerenderElement };

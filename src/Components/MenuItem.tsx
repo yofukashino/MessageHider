@@ -1,14 +1,10 @@
-import { components } from "replugged";
+import { ContextMenu } from "replugged/components";
 import { SettingValues } from "../index";
 import { defaultSettings } from "../lib/consts";
 import { MessageCacheActions, MessageContainerClasses } from "../lib/requiredModules";
-import * as Icons from "./Icons";
-import * as Utils from "../lib/utils";
-import * as Types from "../types";
-
-const {
-  ContextMenu: { MenuItem, ItemColors },
-} = components;
+import Icons from "./Icons";
+import Utils from "../lib/utils";
+import Types from "../types";
 
 export default ({
   channel,
@@ -16,14 +12,14 @@ export default ({
 }: {
   channel: Types.Channel;
   message: Types.Message;
-}): Types.ReactElement | null => {
+}): React.ReactElement | null => {
   return (
-    <MenuItem
+    <ContextMenu.MenuItem
       {...{
         id: "hide-message",
         label: "Hide Message",
-        color: ItemColors.DANGER,
-        icon: () => Icons.eye("18", "18"),
+        color: ContextMenu.ItemColors.DANGER,
+        icon: () => <Icons.eye width="18" height="18" />,
         action: () => {
           switch (SettingValues.get("superTemp", defaultSettings.superTemp)) {
             case true: {
