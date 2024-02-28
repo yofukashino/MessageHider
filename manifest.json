@@ -9,7 +9,7 @@
     "discordID": "1121961711080050780",
     "github": "Yofukashi-No"
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "updater": {
     "type": "store",
     "id": "dev.tharki.MessageHider"
