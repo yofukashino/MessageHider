@@ -4,7 +4,7 @@ Get an option to hide a message locally by right clicking on it.
 
 Reloading Discord will restore the message.
 
-Direct Download Link: [dev.tharki.MessageHider.asar](https://github.com/Yofukashi-No/MessageHider/releases/latest/download/dev.tharki.MessageHider.asar)
+Direct Download Link: [dev.tharki.MessageHider.asar](https://github.com/YofukashiNo/MessageHider/releases/latest/download/dev.tharki.MessageHider.asar)
 
 Install Link:
 

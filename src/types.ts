@@ -1,8 +1,9 @@
 import { types } from "replugged";
-import util from "replugged/util";
-import GeneralDiscordTypes from "discord-types/general";
 import { ChannelMessages as ChannelMessagesType } from "replugged/dist/renderer/modules/common/messages";
 import { ContextMenuProps } from "replugged/dist/renderer/modules/components/ContextMenu";
+import util from "replugged/util";
+import GeneralDiscordTypes from "discord-types/general";
+
 export namespace Types {
   export import DefaultTypes = types;
   export type Guild = GeneralDiscordTypes.Guild;
@@ -27,7 +28,11 @@ export namespace Types {
     scrollerSpacer: string;
     scrollerWrap: string;
   }
-
+  export interface Modules {
+    loadModules?: () => Promise<void>;
+    MessageCacheActions?: ChannelMessages;
+    MessageContainerClasses?: MessageContainerClasses;
+  }
   export interface Settings {
     superTemp: boolean;
   }

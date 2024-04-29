@@ -3,11 +3,11 @@
   "name": "MessageHider",
   "description": "Get an option to hide a message by right clicking on it.",
   "image": "https://i.imgur.com/b5WXMcq.gif",
-  "source": "https://github.com/Yofukashi-No/MessageHider",
+  "source": "https://github.com/YofukashiNo/MessageHider",
   "author": {
-    "name": "Ahlawat",
+    "name": "Nanakusa",
     "discordID": "1121961711080050780",
-    "github": "Yofukashi-No"
+    "github": "YofukashiNo"
   },
   "version": "1.0.4",
   "updater": {
