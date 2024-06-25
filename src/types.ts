@@ -15,18 +15,14 @@ export namespace Types {
   export type ChannelMessages = typeof ChannelMessagesType;
   export type MenuProps = ContextMenuProps["ContextMenu"] & { children: React.ReactElement[] };
   export interface MessageContainerClasses {
-    divider: string;
     empty: string;
     emptyForum: string;
-    messageGroupBlocked: string;
-    messages: string;
     messagesWrapper: string;
     navigationDescription: string;
     scroller: string;
     scrollerContent: string;
     scrollerInner: string;
     scrollerSpacer: string;
-    scrollerWrap: string;
   }
   export interface Modules {
     loadModules?: () => Promise<void>;
